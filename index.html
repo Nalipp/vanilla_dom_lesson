@@ -15,19 +15,29 @@
     <button>Click me!</button>
     <script>
       // change the 'Hello World' text to 'Just changed' using javascript
+      var firstDiv = document.getElementsByTagName("div")[0];
+      firstDiv.innerHTML = "Just changed!";
 
       // change the 'Hello Everyone' text to 'Just changed Again!' using javascript
+      var secondDiv = document.querySelectorAll(".hello")[1];
+      secondDiv.innerHTML = "Just changed Again!";
 
-      // change the font color of the first div to red using camel case
+      // change the font color of the first div to red
+      firstDiv.style.color = "red";
 
       // change the background color of the first div to teal using brackets
+      firstDiv.style['background-color'] = "teal";
 
       // change the id of the body tag from 'container' to 'new_container'
+      var bodyNode = document.getElementById("container");
+      bodyNode.setAttribute("id", "new_container");
 
       // add the class 'another_class' to the second div
+      secondDiv.classList.add("another_class");
 
       // remove the class 'hello' from the second div
+      secondDiv.classList.remove("hello");
+
     </script>
 </body>
 </html>
-
